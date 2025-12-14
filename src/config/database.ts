@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import { FinancialDataModel, DOCUMENT_ID } from '../models/financialDataModel'; // Assuming correct model file path
+import { FinancialDataModel, DOCUMENT_ID } from '../models/financialDataModel';
 
 dotenv.config();
 

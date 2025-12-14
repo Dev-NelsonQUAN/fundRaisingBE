@@ -98,26 +98,3 @@ export const updateAmountOut = async (req: Request<{}, {}, IncrementBody>, res: 
         return res.status(500).json({ error: 'Database operation failed during fund check.' });
     }
 };
-//     const { changeAmount } = req.body;
-
-//     if (changeAmount === undefined || typeof changeAmount !== 'number') {
-//         return res.status(400).json({ error: 'Missing or invalid changeAmount in request body. Must be a number.' });
-//     }
-
-//     try {
-//         const updatedDoc = await updateFinancialData('amountOut', changeAmount);
-
-//         if (updatedDoc) {
-//             await broadcastLatestData();
-//             return res.status(200).json({ 
-//                 message: `Amount Out successfully increased by ${changeAmount}.`, 
-//                 newData: updatedDoc 
-//             });
-//         } else {
-//             return res.status(404).json({ error: 'Data document not found.' });
-//         }
-//     } catch (error) {
-//         console.error('Error updating amount out:', error);
-//         return res.status(500).json({ error: 'Database update failed.' });
-//     }
-// };
